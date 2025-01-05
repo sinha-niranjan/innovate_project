@@ -5,7 +5,7 @@ import ClientList from "../components/ClientList";
 
 const Home = ({ onSearch, onAddClient, clients, setClients }) => {
   return (
-    <div>
+    <div className="bg-slate-800 text-white">
       <h1>WebHostManager</h1>
       <SearchBar onSearch={onSearch} />
       <ClientForm onAddClient={onAddClient} />

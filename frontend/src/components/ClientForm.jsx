@@ -19,7 +19,7 @@ const ClientForm = ({ onAddClient }) => {
   };
 
   return (
-    <div className="min-h-[550px] min-w-[400px] m-auto  items-center justify-center bg-white flex rounded-lg ">
+    <div className="  max-w-[400px] m-auto  items-center justify-center bg-white flex rounded-lg  py-9">
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <input
           type="text"

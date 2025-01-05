@@ -5,6 +5,7 @@ import ClientList from "./components/ClientList";
 import SearchBar from "./components/SearchBar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./page/Home";
+import ClientDetails from "./components/ClientDetails";
 
 const App = () => {
   const [clients, setClients] = useState([]);
@@ -24,7 +25,7 @@ const App = () => {
   );
 
   return (
-    <div>
+    <div className="bg-slate-800 min-h-screen text-white ">
       <Routes>
         <Route
           path="/"
@@ -37,6 +38,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/:id" element={<ClientDetails />} />
       </Routes>
     </div>
   );

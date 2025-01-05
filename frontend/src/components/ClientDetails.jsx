@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-const ClientDetails = ({ clientId }) => {
+const ClientDetails = () => {
   const [client, setClient] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/clients/${clientId}`)
+      .get(`http://localhost:5000/clients/${id}`)
       .then((response) => setClient(response.data))
       .catch((err) => console.error(err));
-  }, [clientId]);
+  }, [id]);
 
   if (!client) return <p>Loading...</p>;
 
